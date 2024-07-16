@@ -1,0 +1,98 @@
+@import "./_variables.css";
+
+.unit-hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--bg-primary);
+  overflow-y: hidden;
+}
+
+.unit-hero-gradient {
+  position: absolute;
+  left: 20%;
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #e8f1ff 100%);
+  z-index: 20;
+  height: 100%;
+  width: 45%;
+}
+
+.unit-hero-overlay {
+  position: absolute;
+  left: 5%;
+  top: 32%;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  align-items: start;
+  z-index: 100;
+  gap: 16px;
+}
+
+.unit-hero-overlay .heading {
+  color: var(--text-color-primary);
+  font-family: var(--font-noto);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+.unit-hero-overlay .description {
+  color: var(--text-color-secondary);
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.unit-hero-overlay .button {
+  display: inline-flex;
+  padding: 16px 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  background: var(--btn-bg-primary);
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-family: var(--font-futsat);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.unit-hero-carousel {
+  width: 80%;
+  height: 100%;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 0px !important;
+}
+
+.slick-dots {
+  display: flex !important;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 50px !important;
+  left: -212px !important;
+  z-index: 100;
+  gap: 8px;
+}
+
+.slick-dots li button:before {
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none"%3E%3Ccircle cx="4.00684" cy="4.77832" r="4" fill="%232A5490" fill-opacity="0.6"%2F%3E%3C%2Fsvg%3E');
+  width: 12px; /* Adjust to match SVG size */
+  height: 12px; /* Adjust to match SVG size */
+}
+
+.slick-dots li.slick-active button:before {
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none"%3E%3Ccircle cx="5.00684" cy="5.77832" r="4.5" stroke="%232A5490"%2F%3E%3C%2Fsvg%3E');
+  width: 12px; /* Adjust to match SVG size */
+  height: 12px; /* Adjust to match SVG size */
+}

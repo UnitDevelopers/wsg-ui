@@ -1,0 +1,73 @@
+.unit-quality {
+  height: 566px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.unit-quality img {
+  object-fit: cover;
+  width: 50%;
+  height: 100%;
+}
+
+.unit-quality .layout {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.unit-quality .layout .container {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  gap: 32px;
+  align-items: start;
+}
+
+.unit-quality .layout .container .title {
+  color: #052b66;
+  font-family: "Noto Serif";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 112.5% */
+  text-transform: capitalize;
+}
+
+.unit-quality .layout .container .feature {
+  display: flex;
+  flex-direction: row;
+  gap: 14.21px;
+}
+
+.unit-quality .layout .container .feature img {
+  width: 74px;
+}
+
+.unit-quality .layout .container .feature .section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.unit-quality .layout .container .feature .section .title {
+  color: #374d71;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.unit-quality .layout .container .feature .section .desc {
+  color: #374d71;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

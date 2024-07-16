@@ -1,0 +1,119 @@
+@import "./_variables.css";
+
+.unit-materials {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.unit-materials .column {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+
+.unit-materials .column .main-section {
+  display: flex;
+  align-items: center;
+  padding: 100px 0px 80px 0px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  flex-shrink: 0;
+  width: 340px;
+}
+
+.unit-materials .column .main-section .title {
+  color: #052b66;
+  font-family: "Noto Serif";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px; /* 120% */
+}
+
+.unit-materials .column .main-section .desc {
+  color: #374d71;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.unit-materials .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 66.67%;
+}
+
+.unit-materials .grid .item {
+  height: 300px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.unit-materials .grid .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.unit-materials .grid .item .group {
+  display: flex;
+  padding: 80px 70px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.unit-materials .grid .item .group .top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.unit-materials .grid .item .group .top-section img {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
+
+.unit-materials .grid .item .group .top-section .title {
+  color: #374d71;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.unit-materials .grid .item .group .top-section .desc {
+  color: #374d71;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.unit-materials .grid .item .button-text {
+  color: #374d71;
+  font-family: Fustat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
