@@ -1,6 +1,6 @@
 @import "./_variables.css";
 
-.unit-house-collection {
+.unit-homepage-house-collection {
   width: 100%;
   min-height: 589px;
   display: flex;
@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.unit-house-collection .container {
+.unit-homepage-house-collection .container {
   padding: 100px 70px 90px 70px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
   align-items: center;
 }
 
-.unit-house-collection .container .title {
+.unit-homepage-house-collection .container .title {
   color: #052b66;
   font-family: "Noto Serif";
   font-size: 28px;
@@ -25,13 +25,13 @@
   line-height: 32px; /* 114.286% */
 }
 
-.unit-house-collection .container .row {
+.unit-homepage-house-collection .container .row {
   display: flex;
   flex-direction: row;
   gap: 17.6px;
 }
 
-.unit-house-collection .container .row img {
+.unit-homepage-house-collection .container .row img {
   width: 244px;
   height: 244px;
   flex-shrink: 0;
@@ -39,7 +39,7 @@
   border-radius: 8px;
 }
 
-.unit-house-collection .container .button {
+.unit-homepage-house-collection .container .button {
   display: inline-flex;
   padding: 16px 100px;
   justify-content: center;
@@ -53,4 +53,53 @@
   font-family: var(--font-futsat);
   font-weight: 700;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .unit-homepage-house-collection .container {
+    padding: 40px 0px 40px 0px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .unit-homepage-house-collection .container .title {
+    color: #052b66;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+  }
+
+  .unit-homepage-house-collection .container .row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 14px;
+    overflow-x: scroll;
+  }
+
+  .unit-homepage-house-collection .container .row img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .unit-homepage-house-collection .container .row img:first-child {
+    margin-left: 20px;
+  }
+
+  .unit-homepage-house-collection .container .row img:last-child {
+    margin-right: 20px;
+  }
+
+  .unit-homepage-house-collection .container .button {
+    color: #fff;
+    font-family: "Fustat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+  }
 }

@@ -1,6 +1,6 @@
 export function createHouseCollection() {
   const hero = document.createElement("section");
-  hero.className = "unit-house-collection";
+  hero.className = "unit-homepage-house-collection";
 
   hero.innerHTML = `
     <div class="container">
