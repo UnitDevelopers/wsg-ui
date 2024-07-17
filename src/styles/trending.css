@@ -1,0 +1,19 @@
+.unit-homepage-trending {
+  width: 100%;
+  height: 727px;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0px 100px 0px;
+  background: #f9fbff;
+  gap: 40px;
+}
+
+.unit-homepage-trending .title {
+  color: #052b66;
+  font-family: "Noto Serif";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 114.286% */
+  padding-left: 60px;
+}

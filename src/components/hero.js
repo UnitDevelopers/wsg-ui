@@ -26,8 +26,8 @@ export function createHero() {
 </div>
 <div class="unit-hero-carousel">
   <div><img src="/hero-image.png" alt="Image 1" /></div>
-  <div><img src="/hero-image.png" alt="Image 2" /></div>
-  <div><img src="/hero-image.png" alt="Image 3" /></div>
+  <div><img src="/category-duvet.png" alt="Image 2" /></div>
+  <div><img src="/category-bed-sheet.png" alt="Image 3" /></div>
 </div>
 <div class="unit-hero-gradient"></div>
   `;

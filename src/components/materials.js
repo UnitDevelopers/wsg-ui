@@ -34,7 +34,7 @@ export function createMaterials() {
           <div class="top-section">
             <img src="/material-2.svg" alt=""/>
             <span class="title">
-              Everyday Series
+              Luxury Series
             </span>
             <span class="desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut eget egestas tellus.
@@ -56,7 +56,7 @@ export function createMaterials() {
           <div class="top-section">
             <img src="/material-3.svg" alt=""/>
             <span class="title">
-              Everyday Series
+              100% Bamboo
             </span>
             <span class="desc">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit ut eget egestas tellus.

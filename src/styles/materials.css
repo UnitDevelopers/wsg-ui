@@ -24,6 +24,8 @@
   gap: 16px;
   flex-shrink: 0;
   width: 340px;
+  position: sticky;
+  top: 0;
 }
 
 .unit-materials .column .main-section .title {
@@ -48,6 +50,16 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 66.67%;
+}
+
+.unit-materials .grid .item:nth-child(2) {
+  background: #fff3d2;
+}
+.unit-materials .grid .item:nth-child(3) {
+  background: #c5e6ff;
+}
+.unit-materials .grid .item:nth-child(6) {
+  background: #bfeed1;
 }
 
 .unit-materials .grid .item {
