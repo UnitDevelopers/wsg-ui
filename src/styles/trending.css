@@ -17,3 +17,22 @@
   line-height: 32px; /* 114.286% */
   padding-left: 60px;
 }
+
+@media (max-width: 768px) {
+  .unit-homepage-trending {
+    padding: 40px 0px 40px 0px;
+    gap: 20px;
+  }
+
+  .unit-homepage-trending .title {
+    padding-left: 20px;
+    font-size: 24px;
+  }
+
+  .product-card:first-child {
+    margin-left: 20px;
+  }
+  .product-card:last-child {
+    margin-right: 20px;
+  }
+}

@@ -240,3 +240,22 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .unit-homepage-best-sellers {
+    padding: 40px 0px 40px 0px;
+    gap: 20px;
+  }
+
+  .unit-homepage-best-sellers .title {
+    padding-left: 20px;
+    font-size: 24px;
+  }
+
+  .product-card:first-child {
+    margin-left: 20px;
+  }
+  .product-card:last-child {
+    margin-right: 20px;
+  }
+}
