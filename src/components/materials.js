@@ -1,6 +1,6 @@
 export function createMaterials() {
   const hero = document.createElement("section");
-  hero.className = "unit-materials";
+  hero.className = "unit-homepage-materials";
 
   hero.innerHTML = `
     <div class="column">
