@@ -1,6 +1,6 @@
 @import "./_variables.css";
 
-.unit-purchase {
+.unit-homepage-purchase {
   position: relative;
   height: 566px;
   display: flex;
@@ -9,13 +9,13 @@
   justify-content: center;
 }
 
-.unit-purchase img {
+.unit-homepage-purchase img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.unit-purchase .container {
+.unit-homepage-purchase .container {
   position: absolute;
   width: 560.952px;
   height: 395.421px;
@@ -30,7 +30,7 @@
   top: 100px;
 }
 
-.unit-purchase .section {
+.unit-homepage-purchase .section {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@
   top: 200px;
 }
 
-.unit-purchase .section .title {
+.unit-homepage-purchase .section .title {
   color: #052b66;
   font-family: "Noto Serif";
   font-size: 40px;
@@ -50,7 +50,7 @@
   line-height: 48px; /* 120% */
 }
 
-.unit-purchase .section .desc {
+.unit-homepage-purchase .section .desc {
   color: #374d71;
   font-family: Inter;
   font-size: 18px;
@@ -59,7 +59,7 @@
   line-height: normal;
 }
 
-.unit-purchase .section .button {
+.unit-homepage-purchase .section .button {
   display: inline-flex;
   padding: 16px 100px;
   justify-content: center;
@@ -74,4 +74,51 @@
   font-weight: 700;
   cursor: pointer;
   z-index: 100;
+}
+
+@media (max-width: 768px) {
+  .unit-homepage-purchase {
+    height: 450px;
+  }
+
+  .unit-homepage-purchase .container {
+    position: absolute;
+    width: 100%;
+    height: 178px;
+    z-index: 10;
+    left: 0;
+    top: 0;
+  }
+
+  .unit-homepage-purchase .section {
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    z-index: 10;
+    left: 0;
+    top: 40px;
+  }
+
+  .unit-homepage-purchase .section .title {
+    font-size: 28px;
+    line-height: 32px; /* 114.286% */
+  }
+
+  .unit-homepage-purchase .section .desc {
+    font-size: 14px;
+    line-height: normal;
+    width: 295px;
+    text-align: center;
+  }
+
+  .unit-homepage-purchase .section .button {
+    max-width: 295px;
+    color: #fff;
+    font-family: Fustat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.44px;
+  }
 }
