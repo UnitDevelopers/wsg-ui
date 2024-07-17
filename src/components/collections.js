@@ -1,8 +1,8 @@
 export function createCollections() {
-    const hero = document.createElement("section");
-    hero.className = "unit-collections";
+  const hero = document.createElement("section");
+  hero.className = "unit-collections";
 
-    hero.innerHTML = `
+  hero.innerHTML = `
 <span class="heading">Treat Yourself to Quality Essentials</span>
 <div class="container">
 <div class="item">
@@ -20,5 +20,5 @@ export function createCollections() {
 </div>
   `;
 
-    return hero;
+  return hero;
 }
