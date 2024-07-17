@@ -1,4 +1,4 @@
-.unit-footer {
+.unit-homepage-footer {
   display: inline-flex;
   height: 264px;
   padding: 0px 82px 0px 70px;
@@ -9,7 +9,7 @@
   justify-content: space-between;
 }
 
-.unit-footer .main-text {
+.unit-homepage-footer .main-text {
   color: #052b66;
   font-family: "Noto Serif";
   font-size: 28px;
@@ -21,9 +21,9 @@
 
 .flex-container {
   display: flex;
-  align-items: flex-start;
   gap: 20px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .icon-container {
@@ -71,4 +71,64 @@
   line-height: 24px; /* 150% */
   letter-spacing: 1.44px;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .unit-homepage-footer {
+    height: auto;
+    padding: 40px 20px 40px 20px;
+    gap: 20px;
+  }
+
+  .unit-homepage-footer .main-text {
+    color: #052b66;
+
+    font-family: "Noto Serif";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 116.667% */
+    width: auto;
+  }
+
+  .flex-container {
+    gap: 18px;
+    align-items: center;
+  }
+
+  .icon-container {
+    height: 60px;
+    width: 60px;
+  }
+
+  .icon-container img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+  }
+
+  .support-container {
+    width: auto;
+    gap: 6px;
+  }
+
+  .support-container .title {
+    color: #374d71;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .support-container .btn-text {
+    color: #052b66;
+    font-family: "Fustat";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: 1.26px;
+    text-transform: uppercase;
+  }
 }

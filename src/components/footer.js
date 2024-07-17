@@ -1,8 +1,8 @@
 export function createFooter() {
-    const hero = document.createElement("section");
-    hero.className = "unit-footer";
+  const hero = document.createElement("section");
+  hero.className = "unit-homepage-footer";
 
-    hero.innerHTML = `
+  hero.innerHTML = `
     <span class="main-text">
         Get in touch with us, we’re always here for you
     </span>
@@ -36,5 +36,5 @@ export function createFooter() {
     </div>
   `;
 
-    return hero;
+  return hero;
 }
