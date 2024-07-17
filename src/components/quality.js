@@ -1,8 +1,8 @@
 export function createQuality() {
-    const hero = document.createElement("section");
-    hero.className = "unit-quality";
+  const hero = document.createElement("section");
+  hero.className = "unit-homepage-quality";
 
-    hero.innerHTML = `
+  hero.innerHTML = `
     <img src="/quality-cover.png" alt=""/>
     <div class="layout">
       <div class="container">
@@ -32,5 +32,5 @@ export function createQuality() {
     </div>
   `;
 
-    return hero;
+  return hero;
 }
