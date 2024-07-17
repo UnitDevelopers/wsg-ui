@@ -1,17 +1,18 @@
 @import "./_variables.css";
 
-.unit-hero {
+.unit-homepage-hero {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-shrink: 0;
   justify-content: flex-end;
   align-items: center;
   background-color: var(--bg-primary);
   overflow-y: hidden;
+  position: relative;
 }
 
-.unit-hero-gradient {
+.unit-homepage-hero-gradient {
   position: absolute;
   left: 20%;
   background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #e8f1ff 100%);
@@ -20,7 +21,7 @@
   width: 45%;
 }
 
-.unit-hero-overlay {
+.unit-homepage-hero-overlay {
   position: absolute;
   left: 5%;
   top: 32%;
@@ -32,7 +33,7 @@
   gap: 16px;
 }
 
-.unit-hero-overlay .heading {
+.unit-homepage-hero-overlay .heading {
   color: var(--text-color-primary);
   font-family: var(--font-noto);
   font-size: 40px;
@@ -41,7 +42,7 @@
   line-height: 48px;
 }
 
-.unit-hero-overlay .description {
+.unit-homepage-hero-overlay .description {
   color: var(--text-color-secondary);
   font-family: var(--font-inter);
   font-size: 18px;
@@ -50,7 +51,7 @@
   line-height: normal;
 }
 
-.unit-hero-overlay .button {
+.unit-homepage-hero-overlay .button {
   display: inline-flex;
   padding: 16px 100px;
   justify-content: center;
@@ -66,12 +67,12 @@
   cursor: pointer;
 }
 
-.unit-hero-carousel {
+.unit-homepage-hero-carousel {
   width: 80%;
   height: 100%;
 }
 
-.unit-hero-carousel img {
+.unit-homepage-hero-carousel img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -81,24 +82,77 @@
   margin-bottom: 0px !important;
 }
 
-.slick-dots {
+.unit-homepage-hero-carousel .slick-dots {
   display: flex !important;
-  justify-content: flex-start;
-  position: absolute;
+  flex-direction: row !important;
+  position: absolute !important;
   bottom: 50px !important;
   left: -212px !important;
-  z-index: 100;
+  z-index: 25;
   gap: 8px;
-}
-
-.slick-dots li button:before {
-  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="9" viewBox="0 0 8 9" fill="none"%3E%3Ccircle cx="4.00684" cy="4.77832" r="4" fill="%232A5490" fill-opacity="0.6"%2F%3E%3C%2Fsvg%3E');
-  width: 12px; /* Adjust to match SVG size */
-  height: 12px; /* Adjust to match SVG size */
+  max-width: 40px !important;
 }
 
 .slick-dots li.slick-active button:before {
-  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none"%3E%3Ccircle cx="5.00684" cy="5.77832" r="4.5" stroke="%232A5490"%2F%3E%3C%2Fsvg%3E');
-  width: 12px; /* Adjust to match SVG size */
-  height: 12px; /* Adjust to match SVG size */
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 10 11" fill="none"%3E%3Ccircle cx="5.00684" cy="5.77832" r="4.5" stroke="%232A5490"%2F%3E%3C%2Fsvg%3E');
+}
+
+@media (max-width: 768px) {
+  .unit-homepage-hero {
+    height: 620px;
+    flex-direction: column;
+  }
+
+  .unit-homepage-hero-gradient {
+    height: 100vw;
+    width: 38%;
+    transform: rotate(90deg);
+    left: 31%;
+    top: 2%;
+  }
+
+  .unit-homepage-hero-overlay {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    left: 0;
+  }
+
+  .unit-homepage-hero-overlay .heading {
+    color: #052b66;
+    text-align: center;
+    font-family: "Noto Serif";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 114.286% */
+    width: 295.066px;
+  }
+
+  .unit-homepage-hero-overlay .description {
+    color: #374d71;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 295.066px;
+  }
+
+  .unit-homepage-hero-overlay .button {
+    display: flex;
+    padding: 16px 100px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 295.066px;
+  }
+
+  .unit-homepage-hero-carousel {
+    width: 100%;
+    height: 385.5px;
+  }
 }
