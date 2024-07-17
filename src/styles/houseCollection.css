@@ -55,7 +55,12 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .unit-homepage-house-collection {
+    width: 100%;
+    min-height: auto;
+  }
+
   .unit-homepage-house-collection .container {
     padding: 40px 0px 40px 0px;
     gap: 20px;
