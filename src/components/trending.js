@@ -1,8 +1,8 @@
 import $ from "jquery";
 
 export function createTrending() {
-  const hero = document.createElement("section");
-  hero.className = "unit-homepage-trending";
+  const trending = document.createElement("section");
+  trending.className = "unit-homepage-trending";
 
   const getTagByCategory = (category) => {
     switch (category) {
@@ -285,10 +285,10 @@ export function createTrending() {
     });
   });
 
-  hero.innerHTML = `
+  trending.innerHTML = `
     <span class="title">Trending & Top Rated</span>
     <div class="product-list"/>
     `;
 
-  return hero;
+  return trending;
 }

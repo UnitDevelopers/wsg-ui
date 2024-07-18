@@ -1,8 +1,8 @@
 export function createPurchase() {
-  const hero = document.createElement("section");
-  hero.className = "unit-homepage-purchase";
+  const purchase = document.createElement("section");
+  purchase.className = "unit-homepage-purchase";
 
-  hero.innerHTML = `
+  purchase.innerHTML = `
     <img src="/purchase-cover.png" alt=""/>
     <div class="container"></div>
     <div class="section">
@@ -18,5 +18,5 @@ export function createPurchase() {
     </div>
   `;
 
-  return hero;
+  return purchase;
 }

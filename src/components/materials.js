@@ -1,8 +1,8 @@
 export function createMaterials() {
-  const hero = document.createElement("section");
-  hero.className = "unit-homepage-materials";
+  const materials = document.createElement("section");
+  materials.className = "unit-homepage-materials";
 
-  hero.innerHTML = `
+  materials.innerHTML = `
     <div class="column">
       <div class="main-section">
         <span class="title">Shop by Material</span>
@@ -70,5 +70,5 @@ export function createMaterials() {
     </div>
   `;
 
-  return hero;
+  return materials;
 }

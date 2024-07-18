@@ -1,8 +1,8 @@
 export function createHouseCollection() {
-  const hero = document.createElement("section");
-  hero.className = "unit-homepage-house-collection";
+  const houseCollection = document.createElement("section");
+  houseCollection.className = "unit-homepage-house-collection";
 
-  hero.innerHTML = `
+  houseCollection.innerHTML = `
     <div class="container">
       <span class="title">
         Cosy House Collection at Home
@@ -20,5 +20,5 @@ export function createHouseCollection() {
     </div>
   `;
 
-  return hero;
+  return houseCollection;
 }

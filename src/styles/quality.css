@@ -1,5 +1,4 @@
 .unit-homepage-quality {
-  height: 566px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -12,29 +11,28 @@
 }
 
 .unit-homepage-quality .layout {
-  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   justify-content: center;
+  padding: 10px 0px 10px 0px;
 }
 
 .unit-homepage-quality .layout .container {
-  margin-left: 120px;
   display: flex;
   flex-direction: column;
   gap: 32px;
   align-items: start;
+  width: 62.5%;
 }
 
 .unit-homepage-quality .layout .container .title {
   color: #052b66;
   font-family: "Noto Serif";
   font-size: 32px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 36px; /* 112.5% */
+  line-height: 36px;
   text-transform: capitalize;
 }
 
@@ -46,6 +44,8 @@
 
 .unit-homepage-quality .layout .container .feature img {
   width: 74px;
+  height: 57px;
+  object-fit: contain;
 }
 
 .unit-homepage-quality .layout .container .feature .section {
@@ -56,23 +56,19 @@
 
 .unit-homepage-quality .layout .container .feature .section .title {
   color: #374d71;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 
 .unit-homepage-quality .layout .container .feature .section .desc {
   color: #374d71;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .unit-homepage-quality {
     display: flex;
     flex-direction: column;
@@ -92,17 +88,18 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
+    padding: 0px;
   }
 
   .unit-homepage-quality .layout .container {
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: start;
     margin-bottom: 40px;
+    width: calc(100% - 40px);
   }
 
   .unit-homepage-quality .layout .container .title {
@@ -133,7 +130,7 @@
 
   .unit-homepage-quality .layout .container .feature .section .title {
     color: #374d71;
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -142,7 +139,7 @@
 
   .unit-homepage-quality .layout .container .feature .section .desc {
     color: #374d71;
-    font-family: Inter;
+    font-family: "Inter";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
