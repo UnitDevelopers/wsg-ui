@@ -13,16 +13,17 @@ export function createFeedback() {
         ${
           review.video
             ? `<div class="feedback-card video-frame">
-              <iframe width="300" height="500" src="${review.video}" title="Customer Feedback Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <video width="300" height="500" controls>
+                <source src="/public/vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
               <div class="video-overlay">
-                <button class="play-btn">Play</button>
-                <button class="mute-btn">Mute</button>
+                <button class="play-btn"><img src="play_button.png" alt=""/></button>
+                <button class="mute-btn"><img src="mute_button.png" alt=""/></button>
               </div>
             </div>`
             : `<div class="padding">
-              <div class="stars">${"★".repeat(review.rating)}${"☆".repeat(
-                5 - review.rating
-              )}</div>
+              <div class="stars"><img src="stars.svg" alt=""/></div>
             <div class="description">${review.content}</div>
             <div class="author">${review.user}</div>
           </div>`
@@ -73,12 +74,20 @@ function initScrolling() {
 
 function initVideoControls() {
   $(document).on("click", ".play-btn", function () {
-    const iframe = $(this).closest(".feedback-card.video").find("iframe")[0];
-    const src = iframe.src;
-    iframe.src = src.includes("autoplay=1")
-      ? src
-      : src + (src.includes("?") ? "&" : "?") + "autoplay=1";
+    const video = $(this).closest(".video-frame").find("video")[0]; 
+    if (video.paused || video.ended) {
+      video.play();
+      $(this).find("img").attr("src", "pause_button.png"); 
+    } else {
+      video.pause();
+      $(this).find("img").attr("src", "play_button.png"); 
+    }
   });
 
-  $(document).on("click", ".mute-btn", function () {});
+  $(document).on("click", ".mute-btn", function () {
+    const video = $(this).closest(".video-frame").find("video")[0]; 
+    video.muted = !video.muted;
+    $(this).find("img").attr("src", video.muted ? "unmute_button.png" : "mute_button.png"); 
+  });
 }
+
