@@ -26,25 +26,46 @@ export function createHouseCollection() {
     </div>
   `;
 
-  $(document).ready(function () {
-    if ($(window).width() < 768) {
-      $(".unit-homepage-house-collection .house-collection-carousel").slick({
+  $(document).ready(function() {
+    initSlick();
+    $(window).resize(initSlick);
+  });
+
+  function initSlick() {
+    const width = $(window).width();
+    const carousel = $(".unit-homepage-house-collection .house-collection-carousel");
+
+    if (carousel.hasClass('slick-initialized')) {
+      carousel.slick('unslick');
+    }
+
+    if (width < 420) {
+      carousel.slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
         dots: true,
         infinite: true,
-        speed: 300,
+      });
+    } else if (width >= 420 && width < 640) {
+      carousel.slick({
         slidesToShow: 2.5,
         slidesToScroll: 1,
         adaptiveHeight: true,
+        dots: true,
+        infinite: true,
       });
-    }
-    if ($(window).width() < 420) {
-      $(".unit-homepage-house-collection .house-collection-carousel").slick({
-        slidesToShow: 1,
+    } else {
+      carousel.slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true,
       });
     }
-  });
+  }
 
   return houseCollection;
 }
