@@ -13,20 +13,32 @@
   }
 }
 
-.scroll-left-button{
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
+.scroll-left-button {
+  display: flex;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  border: 1px solid #e6edf3;
+  height: 55px;
+  width: 55px;
+
+  background: #e6edf3;
 }
 
-.scroll-right-button{
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
+.scroll-right-button {
+  display: flex;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  border: 1px solid #e6edf3;
+  height: 55px;
+  width: 55px;
+
+  background: #e6edf3;
 }
 
 .best-sellers-header {
