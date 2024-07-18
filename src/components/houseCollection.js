@@ -37,6 +37,13 @@ export function createHouseCollection() {
         adaptiveHeight: true,
       });
     }
+    if ($(window).width() < 420) {
+      $(".unit-homepage-house-collection .house-collection-carousel").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+      });
+    }
   });
 
   return houseCollection;

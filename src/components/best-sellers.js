@@ -109,8 +109,8 @@ export function createBestSellers() {
     <div class="best-sellers-header">
       <span class="title">Our Best Sellers</span>
       <div class="scroll-buttons">
-        <button class="scroll-left-button">Scroll Left</button>
-        <button class="scroll-right-button">Scroll Right</button>
+        <button class="scroll-left-button">←</button>
+        <button class="scroll-right-button">→</button>
       </div>
     </div>
     <div class="product-list"/>

@@ -13,6 +13,22 @@
   }
 }
 
+.scroll-left-button{
+  background-color: #eef5fc;
+  color: #18395b;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+}
+
+.scroll-right-button{
+  background-color: #eef5fc;
+  color: #18395b;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+}
+
 .best-sellers-header {
   display: flex;
   justify-content: space-between;

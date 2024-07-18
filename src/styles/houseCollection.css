@@ -82,6 +82,8 @@
     flex-direction: row;
     gap: 14px;
     flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
   }
 
   .unit-homepage-house-collection .container .title {
@@ -100,8 +102,9 @@
 
   .unit-homepage-house-collection .container .house-collection-carousel div {
     flex: 0 0 auto;
-    width: 140px;
-    height: 140px;
+    width: 450px;
+    height: 210px;
+    margin-right: 9%;
   }
 
   .unit-homepage-house-collection
@@ -109,8 +112,9 @@
     .house-collection-carousel
     div
     img {
-    width: 100%;
-    height: 100%;
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
   }
 
   .unit-homepage-house-collection .container .button {
@@ -135,12 +139,29 @@
 
   .slick-dots li button:before {
     font-size: 10px;
-    color: #2a5490;
-    opacity: 0.75;
+    color: #2a5490 !important;
+    opacity: 0.75 !important;
   }
 
   .slick-dots li.slick-active button:before {
     color: #2a5490;
     opacity: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .unit-homepage-house-collection .container .house-collection-carousel div {
+    margin-right: 10%;
+    width: 300px;
+    height: 180px;
+  }
+  .unit-homepage-house-collection
+    .container
+    .house-collection-carousel
+    div
+    img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
   }
 }
