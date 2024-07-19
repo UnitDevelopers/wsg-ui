@@ -3,50 +3,92 @@
   height: 727px;
   display: flex;
   flex-direction: column;
-  padding: 100px 0px;
+  padding: 100px 0;
   background-color: #f5f9fc;
   gap: 40px;
+}
 
-  @media (max-width: 768px) {
-    padding: 40px 0px;
+.unit-homepage-feedback .title {
+  color: #052b66;
+  font-family: "Noto Serif";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.unit-homepage-feedback .best-sellers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+}
+
+@media (max-width: 768px) {
+  .unit-homepage-feedback {
+    padding: 40px 0;
     gap: 20px;
   }
-}
-.feedback-card{
-  background-color: white;
-  border-radius: 20px;
-  border: 1px solid rgb(216, 217, 218);
-  display: inline-block;
-  text-align: center;
-  height: 500px;
-  min-width: 300px;
-  position: relative;
+
+  .unit-homepage-feedback .best-sellers-header {
+    padding: 0 20px;
+  }
+
+  .unit-homepage-feedback .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .scroll-buttons {
+    display: none;
+  }
 }
 
-.feedback-card .description{
-  margin-top: 10px;
-  color:#5a5959;
-  width: 100%;
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 500px;
+  min-width: 340px;
+  position: relative;
+  align-items: center;
+  gap: 28px;
+  border-radius: 12px;
+  border: 1px solid #e6edf3;
+  background: #fff;
 }
-.feedback-card .padding{
-  padding: 40px;
+
+.feedback-card .description,
+.feedback-card .author {
+  color: #374d71;
+  font-family: "Inter";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.feedback-card .padding {
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
 }
 
 .feedback-card .author {
   position: absolute;
-  bottom: 10px; 
-  left: 50%; 
+  bottom: 20px;
+  left: 50%;
   transform: translateX(-50%);
-  color: #000;
-  font-weight: bold;
 }
+
 .feedback-card .video-frame {
   position: relative;
-  width: 300px;
+  width: 100%;
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
-  padding: 0px!important;
 }
 
 .feedback-card video {
@@ -57,6 +99,19 @@
 
 .video-overlay {
   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  pointer-events: none;
+}
+
+.video-controls-overlay {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -64,12 +119,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%); 
-  pointer-events: none; 
-}
-
-.video-overlay button {
-  pointer-events: auto; 
+  background: transparent;
+  pointer-events: none;
+  z-index: 20;
 }
 
 .play-btn {
@@ -99,70 +151,20 @@
   font-size: 12px;
 }
 
-
-.scroll-left-button{
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-}
-
-.scroll-right-button{
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
-}
-
-.feedback-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 70px;
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-}
-
-.unit-homepage-feedback .title {
-  color: #052b66;
-  font-family: "Noto Serif";
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 32px;
-
-  @media (max-width: 768px) {
-    font-size: 24px;
-    line-height: 28px;
-  }
-}
-
 .scroll-buttons {
   display: flex;
   gap: 10px;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 }
 
 .scroll-button {
-  background: #052b66;
-  color: #fff;
+  background-color: #eef5fc;
+  color: #18395b;
+  padding: 10px;
+  border-radius: 50%;
   border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 .feedback-list {
-  font-family: "Noto Serif";
   display: inline-flex;
   align-items: flex-start;
   gap: 20px;
@@ -173,13 +175,14 @@
   display: none;
 }
 
-
-.stars {
-  color: gold;
+.stars img {
+  width: 100%;
 }
 
-.reviews {
-  color: #829cb2;
-  font-family: Inter;
-  font-size: 14px;
+.feedback-card:first-child {
+  margin-left: 70px;
+}
+
+.feedback-card:last-child {
+  margin-right: 70px;
 }
