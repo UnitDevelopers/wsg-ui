@@ -19,8 +19,8 @@ export function createProductSection(products, id, title) {
     }
     if (
       !!product.tag &&
-      !!id.includes("trending") &&
-      product.tag !== "Bestseller"
+      !!id.includes("trending-section") &&
+      (product.tag !== "Top Rated" || product.tag !== "Trending")
     ) {
       return `<span class="product-tag">${product.tag}</span>`;
     }
@@ -101,23 +101,26 @@ export function createProductSection(products, id, title) {
       });
     });
 
-    const firstColorElement = productList.querySelector(".color");
-    if (firstColorElement) {
-      firstColorElement.classList.add("active");
-    }
+    const productCardsElements = productList.querySelectorAll(".product-card");
+    productCardsElements.forEach((productCard) => {
+      const firstColorElement = productCard.querySelector(".color");
+      if (firstColorElement) {
+        firstColorElement.classList.add("active");
+      }
+    });
   };
 
   section.innerHTML = `
-    <div class="product-section-header">
+    <div id="${id}" class="product-section-header">
       <span class=".product-section title">${title}</span>
-      <div class="scroll-buttons">
-        <button class="scroll-left-button">
+      <div class="products-scroll-buttons">
+        <button class="products-scroll-left-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
             <path d="M6.2959 16.7959L1.5 12L6.2959 7.2041" stroke="#052B66" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M21.5 12L1.5 12" stroke="#052B66" stroke-linecap="round" />
           </svg>
         </button>
-        <button class="scroll-right-button">
+        <button class="products-scroll-right-button">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
             <path d="M16.7041 7.2041L21.5 12L16.7041 16.7959" stroke="#052B66" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M1.5 12H21.5" stroke="#052B66" stroke-linecap="round" />
@@ -131,6 +134,21 @@ export function createProductSection(products, id, title) {
   document.addEventListener("DOMContentLoaded", () => {
     const productList = section.querySelector(".product-list");
     appendProducts(products, productList);
+
+    const scrollLeftButton = section.querySelector(
+      ".products-scroll-left-button"
+    );
+    const scrollRightButton = section.querySelector(
+      ".products-scroll-right-button"
+    );
+
+    scrollLeftButton.addEventListener("click", () => {
+      productList.scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    scrollRightButton.addEventListener("click", () => {
+      productList.scrollBy({ left: 300, behavior: "smooth" });
+    });
   });
 
   return section;

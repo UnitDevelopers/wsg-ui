@@ -14,8 +14,8 @@
   }
 }
 
-.scroll-left-button,
-.scroll-right-button {
+.products-scroll-left-button,
+.products-scroll-right-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +51,7 @@
   }
 }
 
-.scroll-buttons {
+.products-scroll-buttons {
   display: flex;
   gap: 10px;
 
@@ -231,7 +231,7 @@
 }
 
 .stars {
-  color: gold;
+  color: #f8be01;
 }
 
 .reviews {
