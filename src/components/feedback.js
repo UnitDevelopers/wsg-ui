@@ -5,12 +5,11 @@ export function createFeedback() {
   const feedback = document.createElement("section");
   feedback.className = "unit-homepage-feedback";
   
-  // Updated feedbackHTML to be more suitable for Slick Carousel
   const feedbackHTML = reviews.map(review => `
     <div class="padding">
     <div class="feedback-card ${review.video ? "video-frame" : ""}">
       ${review.video ? `
-        <video controls>
+        <video>
           <source src="/public/vid.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
@@ -54,7 +53,7 @@ export function createFeedback() {
 
   document.body.appendChild(feedback);
   initVideoControls();
-  initSlickCarousel(); // New function to initialize Slick Carousel
+  initSlickCarousel();
 
   return feedback;
 }
@@ -65,8 +64,8 @@ function initSlickCarousel() {
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 3, // Customize number of slides visible
-    slidesToScroll: 3, // Customize number of slides to scroll
+    slidesToShow: 3,
+    slidesToScroll: 3, 
     responsive: [
       {
         breakpoint: 1024,
@@ -88,7 +87,7 @@ function initSlickCarousel() {
       }
     ]
   });
-  // Custom button functionality
+  
   $('.scroll-left-button').click(function() {
     $('.feedback-list').slick('slickPrev');
   });
