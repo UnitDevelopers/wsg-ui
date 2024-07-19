@@ -48,7 +48,7 @@ export function createFeedback() {
           </button>
         </div>
     </div>
-    <div class="feedback-list slider">${feedbackHTML}</div> <!-- Notice the added 'slider' class -->
+    <div class="feedback-list slider">${feedbackHTML}</div>
   `;
 
   document.body.appendChild(feedback);
@@ -64,7 +64,7 @@ function initSlickCarousel() {
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 3, 
     responsive: [
       {

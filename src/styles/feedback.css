@@ -19,7 +19,7 @@
   display: inline-block;
   text-align: center;
   height: 500px;
-  min-width: 300px;
+  width: 340px;
   position: relative;
   margin: 0 15px;
 }
@@ -170,6 +170,15 @@
   gap: 20px; 
   overflow-x: auto; 
   padding: 0; 
+}
+
+
+.feedback-list .slick-list .slick-track:nth-child(1) {
+  padding-left: 70px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+  }
 }
 
 .feedback-list::-webkit-scrollbar {
