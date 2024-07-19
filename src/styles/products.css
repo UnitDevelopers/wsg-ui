@@ -156,13 +156,21 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    width: 240px;
+  }
 }
 
 .product-title {
   color: #374d71;
-  font-family: Inter;
+  font-family: "Inter";
   font-size: 18px;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .price {
