@@ -107,13 +107,23 @@ export function createBestSellers() {
 
   bestSellers.innerHTML = `
     <div class="best-sellers-header">
-      <span class="title">Our Best Sellers</span>
-      <div class="scroll-buttons">
-        <button class="scroll-left-button">Scroll Left</button>
-        <button class="scroll-right-button">Scroll Right</button>
+        <span class="title">Our Best Sellers</span>
+        <div class="scroll-buttons">
+          <button class="scroll-left-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+              <path d="M6.2959 16.7959L1.5 12L6.2959 7.2041" stroke="#052B66" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.5 12L1.5 12" stroke="#052B66" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button class="scroll-right-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
+              <path d="M16.7041 7.2041L21.5 12L16.7041 16.7959" stroke="#052B66" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M1.5 12H21.5" stroke="#052B66" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-    <div class="product-list"/>
+      <div class="product-list" />
   `;
 
   return bestSellers;

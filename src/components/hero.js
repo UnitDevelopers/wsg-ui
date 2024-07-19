@@ -40,7 +40,7 @@ export function createHero() {
     <div class="unit-homepage-hero-overlay">
       <span class="heading">Affordable Luxury, Delivered Daily</span>
       <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut eget egestas tellus.</span>
-      <button class="shop-button">SHOP NOW</button>
+      <span class="shop-button">SHOP NOW</span>
     </div>
     <div class="unit-homepage-hero-carousel">
       <div><img src="/hero-image.png" alt="Hero Image 1" /></div>
