@@ -17,19 +17,20 @@ export function createFeedback() {
           <source src="/vid.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
+        <div class="video-gradient-overlay">
+          <span class="author">${review.user}</span>
+        </div>
         <div class="video-overlay">
           <button class="play-btn"><img src="play_button.png" alt="Play"/></button>
           <button class="mute-btn"><img src="mute_button.png" alt="Mute"/></button>
         </div>`
           : `
-        <div class="padding">
-          <div>
-                        <span class="stars">${"★".repeat(
-                          review.rating
-                        )}${"☆".repeat(5 - review.rating)}</span>
-                    </div>
-          <div class="description">${review.content}</div>
-          <div class="author">${review.user}</div>
+        <div class="feedback-card-container">
+          <span class="stars">
+              ${"★".repeat(review.rating)}${"☆".repeat(5 - review.rating)}
+          </span>
+          <span class="description">${review.content}</span>
+          <span class="author">${review.user}</span>
         </div>`
       }
     </div>
@@ -68,8 +69,14 @@ export function createFeedback() {
 
 window.addEventListener("resize", () => {
   const windowWidth = document.body.clientWidth;
-  const slidesToShow = windowWidth / 360;
-  $(".feedback-list").slick("slickSetOption", "slidesToShow", slidesToShow);
+
+  if (windowWidth > 768) {
+    const slidesToShow = windowWidth / 360;
+    $(".feedback-list").slick("slickSetOption", "slidesToShow", slidesToShow);
+  } else {
+    const slidesToShow = windowWidth / 280;
+    $(".feedback-list").slick("slickSetOption", "slidesToShow", slidesToShow);
+  }
 });
 
 function initSlickCarousel() {
