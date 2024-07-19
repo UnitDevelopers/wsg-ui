@@ -59,6 +59,7 @@ export function createFeedback() {
   return feedback;
 }
 
+
 function initSlickCarousel() {
   $('.feedback-list').slick({
     dots: false,
