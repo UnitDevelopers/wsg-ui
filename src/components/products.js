@@ -5,13 +5,36 @@ export function createProductSection(products, id, title) {
   section.className = "product-section";
   section.id = id;
 
-  const getTagByCategory = (category) => {
-    const tags = {
+  const getProductTag = (product) => {
+    console.log(product.tag, id);
+    if (!!product.discount) {
+      return `<span class="discount-tag">${product.discount}</span>`;
+    }
+    if (
+      !!product.tag &&
+      !!id.includes("best-sellers") &&
+      product.tag !== "Bestseller"
+    ) {
+      return `<span class="product-tag">${product.tag}</span>`;
+    }
+    if (
+      !!product.tag &&
+      !!id.includes("trending") &&
+      product.tag !== "Bestseller"
+    ) {
+      return `<span class="product-tag">${product.tag}</span>`;
+    }
+
+    return "";
+  };
+
+  const getQualityTag = (quality) => {
+    const qualities = {
       luxury: `<div class="luxury-badge"><img src="/luxury-icon.svg" alt=""/>Luxury Series</div>`,
       bamboo: `<div class="bamboo-badge"><img src="/bamboo-icon.svg" alt=""/>100% Bamboo</div>`,
       everyday: `<div class="everyday-badge"><img src="/everyday-icon.svg" alt=""/>Everyday Series</div>`,
     };
-    return tags[category] || "";
+    return qualities[quality] || "";
   };
 
   const createProductCard = (product) => {
@@ -29,11 +52,7 @@ export function createProductSection(products, id, title) {
 
     return `
       <div class="product-card" id="${product.id}">
-        ${
-          product.discount
-            ? `<div class="discount-tag">${product.discount}</div>`
-            : ""
-        }
+        ${getProductTag(product)}
         <div class="product-image-card"><img src="${initialImage}" alt="Product Image" class="product-image"></div>
         <div class="product-description">
           <span class="product-title">${product.name}</span>
@@ -42,7 +61,7 @@ export function createProductSection(products, id, title) {
               ? `<span class="price">From <span class="discounted-original-price">${product.originalPrice}</span><span class="sale-price"> ${product.salePrice}</span></span>`
               : `<span class="price">From <span class="original-price">${product.originalPrice}</span></span>`
           }
-          ${getTagByCategory(product.tag)}
+          ${getQualityTag(product.quality)}
           <div><span class="stars">${"★".repeat(product.rating)}${"☆".repeat(
       5 - product.rating
     )}</span><span class="reviews">(${product.reviews})</span></div>
@@ -111,16 +130,7 @@ export function createProductSection(products, id, title) {
 
   document.addEventListener("DOMContentLoaded", () => {
     const productList = section.querySelector(".product-list");
-    console.log("productList :>> ", productList);
     appendProducts(products, productList);
-
-    $(productList).slick({
-      infinite: true,
-      slidesToShow: 10,
-      slidesToScroll: 1,
-      prevArrow: section.querySelector(".scroll-left-button"),
-      nextArrow: section.querySelector(".scroll-right-button"),
-    });
   });
 
   return section;
