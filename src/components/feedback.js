@@ -31,7 +31,7 @@ export function createFeedback() {
   `).join('');
 
   feedback.innerHTML = `
-    <div class="best-sellers-header">
+    <div class="feedback-header">
       <span class="title">Why our Customers Love Cosy House Collection</span>
       <div class="scroll-buttons">
           <button class="scroll-left-button">
@@ -68,9 +68,36 @@ function initSlickCarousel() {
     slidesToScroll: 3, 
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2.5,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1.5,
           slidesToScroll: 2,
           infinite: true,
           dots: false
