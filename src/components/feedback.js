@@ -4,19 +4,24 @@ import { reviews } from "../data/feedback";
 export function createFeedback() {
   const feedback = document.createElement("section");
   feedback.className = "unit-homepage-feedback";
-  
-  const feedbackHTML = reviews.map(review => `
+
+  const feedbackHTML = reviews
+    .map(
+      (review) => `
     <div class="padding">
     <div class="feedback-card ${review.video ? "video-frame" : ""}">
-      ${review.video ? `
+      ${
+        review.video
+          ? `
         <video>
-          <source src="/public/vid.mp4" type="video/mp4">
+          <source src="/vid.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="video-overlay">
           <button class="play-btn"><img src="play_button.png" alt="Play"/></button>
           <button class="mute-btn"><img src="mute_button.png" alt="Mute"/></button>
-        </div>` : `
+        </div>`
+          : `
         <div class="padding">
           <div>
                         <span class="stars">${"★".repeat(
@@ -25,10 +30,13 @@ export function createFeedback() {
                     </div>
           <div class="description">${review.content}</div>
           <div class="author">${review.user}</div>
-        </div>`}
+        </div>`
+      }
     </div>
     </div>
-  `).join('');
+  `
+    )
+    .join("");
 
   feedback.innerHTML = `
     <div class="feedback-header">
@@ -58,72 +66,32 @@ export function createFeedback() {
   return feedback;
 }
 
+window.addEventListener("resize", () => {
+  const windowWidth = document.body.clientWidth;
+  const slidesToShow = windowWidth / 360;
+  $(".feedback-list").slick("slickSetOption", "slidesToShow", slidesToShow);
+});
 
 function initSlickCarousel() {
-  $('.feedback-list').slick({
+  const windowWidth = document.body.clientWidth;
+  const slidesToShow = windowWidth / 360;
+
+  $(".feedback-list").slick({
     dots: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 3, 
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 2.5,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 700,
-        settings: {
-          slidesToShow: 1.5,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true
-
-        }
-      }
-    ]
-  });
-  
-  $('.scroll-left-button').click(function() {
-    $('.feedback-list').slick('slickPrev');
+    slidesToShow,
+    slidesToScroll: 1,
   });
 
-  $('.scroll-right-button').click(function() {
-    $('.feedback-list').slick('slickNext');
+  $(".scroll-left-button").click(function () {
+    $(".feedback-list").slick("slickPrev");
+  });
+
+  $(".scroll-right-button").click(function () {
+    $(".feedback-list").slick("slickNext");
   });
 }
-
 
 function initVideoControls() {
   $(document).on("click", ".play-btn", function () {
