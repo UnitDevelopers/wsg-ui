@@ -157,19 +157,31 @@
 }
 
 .scroll-left-button {
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
+  display: flex;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  border: 1px solid #e6edf3;
+  height: 55px;
+  width: 55px;
+
+  background: #e6edf3;
 }
 
 .scroll-right-button {
-  background-color: #eef5fc;
-  color: #18395b;
-  padding: 10px;
-  border-radius: 50%;
-  border: none;
+  display: flex;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 64px;
+  border: 1px solid #e6edf3;
+  height: 55px;
+  width: 55px;
+
+  background: #e6edf3;
 }
 
 .feedback-header {
@@ -227,10 +239,16 @@
 }
 
 .feedback-list .slick-list .slick-track:nth-child(1) {
-  padding-left: 70px;
+  padding-left: 0px;
 
-  @media (max-width: 768px) {
-    padding-left: 20px;
+  @media (max-width: 450px) {
+    padding-left: 50%;
+  }
+  @media (max-width: 375px) {
+    padding-left: 40%;
+  }
+  @media (max-width: 320px) {
+    padding-left: 18%;
   }
 }
 
