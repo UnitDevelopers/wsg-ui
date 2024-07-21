@@ -1,11 +1,12 @@
 export const bestSellingProducts = [
   {
-    id: "1",
+    id: "bs-1",
     name: "Luxury Bed Sheets",
     discount: "38% off",
+    tag: "Bestseller",
     originalPrice: "$169.95",
     salePrice: "$57.95",
-    tag: "bamboo",
+    quality: "bamboo",
     rating: 5,
     reviews: 6933,
     colors: [
@@ -20,12 +21,13 @@ export const bestSellingProducts = [
     ],
   },
   {
-    id: "2",
+    id: "bs-2",
     name: "Luxury Pillow",
     discount: "62% off",
+    tag: "Bestseller",
     originalPrice: "$143.95",
     salePrice: "$54.95",
-    tag: "bamboo",
+    quality: "bamboo",
     rating: 5,
     reviews: 873,
     colors: [
@@ -35,12 +37,13 @@ export const bestSellingProducts = [
     ],
   },
   {
-    id: "3",
+    id: "bs-3",
     name: "Luxury Down Alternative Comforter",
     discount: "38% off",
+    tag: "Bestseller",
     originalPrice: "$144.95",
     salePrice: "$89.95",
-    tag: "luxury",
+    quality: "luxury",
     rating: 5,
     reviews: 255,
     colors: [
@@ -56,12 +59,13 @@ export const bestSellingProducts = [
     ],
   },
   {
-    id: "4",
+    id: "bs-4",
     name: "Luxury Quilt Set",
-    discount: "New",
+    discount: "",
+    tag: "New",
     originalPrice: "$144.95",
     salePrice: "$144.95",
-    tag: "everyday",
+    quality: "everyday",
     rating: 5,
     reviews: 68,
     colors: [
@@ -72,12 +76,13 @@ export const bestSellingProducts = [
     ],
   },
   {
-    id: "5",
+    id: "bs-5",
     name: "Luxury Bed Sheet Protector",
     discount: "",
+    tag: "Bestseller",
     originalPrice: "$127.95",
     salePrice: "$127.95",
-    tag: "bamboo",
+    quality: "bamboo",
     rating: 5,
     reviews: 315,
     colors: [

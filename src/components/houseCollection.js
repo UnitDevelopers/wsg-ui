@@ -43,7 +43,7 @@ export function createHouseCollection() {
 
     if (width < 420) {
       carousel.slick({
-        slidesToShow: 2,
+        slidesToShow: width / 154,
         slidesToScroll: 2,
         adaptiveHeight: true,
         dots: true,
@@ -51,7 +51,7 @@ export function createHouseCollection() {
       });
     } else if (width >= 420 && width < 640) {
       carousel.slick({
-        slidesToShow: 2.5,
+        slidesToShow: width / 154,
         slidesToScroll: 2,
         adaptiveHeight: true,
         dots: true,
@@ -62,7 +62,7 @@ export function createHouseCollection() {
         dots: true,
         infinite: true,
         speed: 300,
-        slidesToShow: 3,
+        slidesToShow: width / 154,
         slidesToScroll: 2,
         adaptiveHeight: true,
       });

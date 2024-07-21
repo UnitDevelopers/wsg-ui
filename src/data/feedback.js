@@ -47,4 +47,44 @@ export const reviews = [
     user: "Brianna W.",
     video: "https://www.youtube.com/embed/YooFwA7xj18",
   },
+  {
+    id: "7",
+    rating: 5,
+    content:
+      "I got my new Cosy House Luxury Comforter made with bamboo viscose and I absolutely love it! I have ovarian cancer and because of my surgery I get awful hot flashes and night sweats and with this comforter it helps keep me cool and cozy!! It's also super soft! Dog approved, hubby approved, and most importantly I approve! Normally I would expect to pay hundreds of dollars for such a luxurious item but it's UNDER $100!!!! Love my new Cosy!!",
+    user: "Brianna W.",
+    video: "https://www.youtube.com/embed/YooFwA7xj18",
+  },
+  {
+    id: "8",
+    rating: 5,
+    content:
+      "Are you ready for the best night's sleep of your life?! I'm such a hot sleeper and often find myself sweating and tossing and turning...but not anymore! I got the Luxury Down Alternative Comforter from Cosy House and let me tell you, this bamboo viscose fabric makes all the difference! Softer than cotton, you'll never want to sleep without it. Bonus: it's hypoallergenic and seriously obsessed with the luxurious feel. You have to order this now!!",
+    user: "Karissa B.",
+    video: "",
+  },
+  {
+    id: "9",
+    rating: 2,
+    content:
+      "Are you ready for the best night's sleep of your life?! I'm such a hot sleeper and often find myself sweating and tossing and turning...but not anymore! I got the Luxury Down Alternative Comforter from Cosy House and let me tell you, this bamboo viscose fabric makes all the difference! Softer than cotton, you'll never want to sleep without it. Bonus: it's hypoallergenic and seriously obsessed with the luxurious feel. You have to order this now!!",
+    user: "Karissa BB.",
+    video: "",
+  },
+  {
+    id: "10",
+    rating: 2,
+    content:
+      "Are you ready for the best night's sleep of your life?! I'm such a hot sleeper and often find myself sweating and tossing and turning...but not anymore! I got the Luxury Down Alternative Comforter from Cosy House and let me tell you, this bamboo viscose fabric makes all the difference! Softer than cotton, you'll never want to sleep without it. Bonus: it's hypoallergenic and seriously obsessed with the luxurious feel. You have to order this now!!",
+    user: "Karissa BB.",
+    video: "",
+  },
+  {
+    id: "11",
+    rating: 5,
+    content:
+      "I got my new Cosy House Luxury Comforter made with bamboo viscose and I absolutely love it! I have ovarian cancer and because of my surgery I get awful hot flashes and night sweats and with this comforter it helps keep me cool and cozy!! It's also super soft! Dog approved, hubby approved, and most importantly I approve! Normally I would expect to pay hundreds of dollars for such a luxurious item but it's UNDER $100!!!! Love my new Cosy!!",
+    user: "Brianna W.",
+    video: "https://www.youtube.com/embed/YooFwA7xj18",
+  },
 ];

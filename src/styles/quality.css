@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 566px;
 }
 
 .unit-homepage-quality img {
   object-fit: cover;
   width: 50%;
-  height: 100%;
+  aspect-ratio: 1.29;
 }
 
 .unit-homepage-quality .layout {
@@ -16,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0px 10px 0px;
+  aspect-ratio: 1.29;
 }
 
 .unit-homepage-quality .layout .container {
