@@ -21,8 +21,8 @@ export function createFeedback() {
           <span class="author">${review.user}</span>
         </div>
         <div class="video-overlay">
-          <button class="play-btn"><img src="play_button.png" alt="Play"/></button>
-          <button class="mute-btn"><img src="mute_button.png" alt="Mute"/></button>
+          <button class="play-btn"><img src="play.svg" alt="Play"/></button>
+          <button class="mute-btn"><img src="mute.svg" alt="Mute"/></button>
         </div>`
           : `
         <div class="feedback-card-container">
@@ -81,15 +81,28 @@ window.addEventListener("resize", () => {
 
 function initSlickCarousel() {
   const windowWidth = document.body.clientWidth;
-  const slidesToShow = windowWidth / 360;
 
-  $(".feedback-list").slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow,
-    slidesToScroll: 1,
-  });
+  if (windowWidth > 768) {
+    const slidesToShow = windowWidth / 360;
+
+    $(".feedback-list").slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow,
+      slidesToScroll: 1,
+    });
+  } else {
+    const slidesToShow = windowWidth / 280;
+
+    $(".feedback-list").slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow,
+      slidesToScroll: 1,
+    });
+  }
 
   $(".scroll-left-button").click(function () {
     $(".feedback-list").slick("slickPrev");
@@ -101,17 +114,35 @@ function initSlickCarousel() {
 }
 
 function initVideoControls() {
+  // Play/Pause button functionality
   $(document).on("click", ".play-btn", function () {
     const video = $(this).closest(".video-frame").find("video")[0];
+    const img = $(this).find("img");
+
     if (video.paused || video.ended) {
       video.play();
+      img.attr("src", "pause-icon.svg");
+      img.attr("alt", "Pause");
     } else {
       video.pause();
+      img.attr("src", "play.svg");
+      img.attr("alt", "Play");
     }
   });
 
+  // Mute/Unmute button functionality
   $(document).on("click", ".mute-btn", function () {
     const video = $(this).closest(".video-frame").find("video")[0];
+    const img = $(this).find("img");
+
     video.muted = !video.muted;
+
+    if (video.muted) {
+      img.attr("src", "unmute-icon.svg");
+      img.attr("alt", "Unmute");
+    } else {
+      img.attr("src", "mute.svg");
+      img.attr("alt", "Mute");
+    }
   });
 }

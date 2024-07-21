@@ -16,7 +16,7 @@ export function createMaterials() {
       <div class="item">
         <div class="group">
           <div class="top-section">
-            <img src="material/everyday.png" alt=""/>
+            <img src="material/everyday-icon.svg" alt=""/>
             <span class="title">
               Everyday Series
             </span>
@@ -32,7 +32,7 @@ export function createMaterials() {
       <div class="item">
       <div class="group">
           <div class="top-section">
-            <img src="/material/luxury.png" alt=""/>
+            <img src="/material/luxury-icon.svg" alt=""/>
             <span class="title">
               Luxury Series
             </span>
@@ -54,7 +54,7 @@ export function createMaterials() {
       <div class="item">
       <div class="group">
           <div class="top-section">
-            <img src="material/bamboo.png" alt=""/>
+            <img src="material/bamboo-icon.svg" alt=""/>
             <span class="title">
               100% Bamboo
             </span>
