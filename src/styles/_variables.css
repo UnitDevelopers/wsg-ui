@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #052b66;
+  --font-noto: "Noto Serif", serif;
+  --font-futsat: "Fustat", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --bg-primary: #e8f1ff;
+  --text-color-primary: #052b66;
+  --text-color-secondary: #052b66;
+  --btn-bg-primary: #2a5490;
+}
